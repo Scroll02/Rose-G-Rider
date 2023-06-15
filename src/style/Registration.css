@@ -1,0 +1,127 @@
+.registration__body {
+  width: 100%;
+  height: auto;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.registrationForm__container {
+  padding: 3rem;
+  border: 3px solid var(--background-color2);
+  border-radius: 50px;
+  background-color: var(--background-color1);
+  width: 700px;
+}
+.registrationForm__container h5 {
+  color: var(--background-color2);
+}
+.registrationForm__container,
+.registration__form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Registration Form Label, Input and Error Msg */
+.registrationForm__group {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  align-self: center;
+  justify-content: center;
+  width: 80%;
+}
+.registrationForm__group label {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--text-color1);
+  align-self: flex-start;
+}
+.registrationForm__input {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: 2px solid var(--text-color1);
+  box-shadow: 3px 3px var(--background-color2);
+  font-size: 1rem;
+  transition: border-color 0.2s ease-in-out;
+  width: 100%;
+  box-sizing: border-box;
+}
+.registrationForm__input:focus {
+  outline: none;
+  border-color: var(--background-color2);
+}
+.registration__input-container {
+  position: relative;
+}
+
+.registration__input-icon {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.registration__visibility-icon {
+  color: var(--text-color2);
+}
+.registration__errorMsg {
+  color: var(--text-color1);
+  font-size: 0.8rem !important;
+  margin-top: 10px;
+  background-color: red;
+  padding: 5px;
+  border-radius: 5px;
+}
+.customErrorMsg {
+  color: var(--text-color1);
+  font-size: 0.9rem;
+  padding: 0 5px;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-align: center;
+  background-color: red;
+  margin: auto;
+}
+
+.youAgree__txt {
+  font-size: 0.8rem;
+  color: var(--text-color1);
+}
+.youAgree__txt label {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5rem;
+  color: var(--text-color1);
+}
+.youAgree__txt label span {
+  text-decoration: underline;
+  color: var(--background-color2);
+  cursor: pointer;
+}
+.signUp__btn {
+  width: 80%;
+  align-self: center;
+  border: none;
+  background-color: var(--background-color2);
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-color2);
+  margin-bottom: 0.5rem;
+}
+.alreadyHave__txt {
+  color: var(--text-color1);
+}
+.alreadyHave__txt span {
+  color: var(--background-color2);
+  text-decoration: underline;
+  cursor: pointer;
+}

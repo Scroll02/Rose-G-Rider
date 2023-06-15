@@ -1,0 +1,163 @@
+.menu__productWrapper {
+  text-decoration: none;
+  color: inherit;
+}
+.menu__productWrapper:hover {
+  text-decoration: none;
+  color: inherit;
+}
+.menu__productCards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10px;
+}
+.menu__singleProduct {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* height: 250px; */
+  background: var(--text-color1);
+  border: 1px solid var(--text-color2);
+  box-shadow: 10px 10px 2px var(--background-color1);
+  overflow: hidden;
+  margin-bottom: 20px;
+  min-height: 250px;
+  padding: 15px;
+  flex: 1 1 auto;
+  border-radius: 10px;
+  text-decoration: none;
+  color: inherit;
+}
+.menu__singleProduct:hover {
+  transform: scale(1.1);
+  text-decoration: none;
+  color: inherit;
+}
+
+.menu__productImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  overflow: hidden;
+}
+.menu__productImg img {
+  display: block;
+  object-fit: contain;
+  margin: auto;
+  width: 100%;
+  height: 100px;
+}
+
+.menu__productImg img.Palabok25pax {
+  height: 100px;
+}
+.menu__productImg img.Palabok16pax {
+  height: 80px;
+}
+.menu__productImg img.Palabok12pax {
+  height: 60px;
+}
+.menu__productImg img.Palabok8pax {
+  height: 50px;
+}
+.menu__productContent {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.menu__productContent h6 {
+  font-weight: 600;
+}
+.menu__productContent a {
+  text-decoration: none;
+  color: var(--text-color2);
+}
+.menu__productContent a:hover {
+  color: var(--background-color1);
+}
+.menu__productDesc {
+  font-size: 0.9rem;
+  line-height: 1.2rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.menu__productFooter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu__productPrice,
+.menu__orderBtn {
+  display: inline-block;
+  margin: 0 5px 0 30px;
+}
+.menu__productPrice {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.menu__orderBtn {
+  padding: 7px 25px;
+  font-weight: 600;
+  border-radius: 5px;
+  background: var(--background-color2);
+  border: none;
+  color: #000000;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu__orderBtn span {
+  font-size: 1rem;
+  font-weight: 700;
+}
+.menu__orderBtn label {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+@media only screen and (min-width: 769px) {
+  .menu__productCards {
+    justify-content: center;
+  }
+  .menu__singleProduct {
+    height: 250px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .menu__singleProduct {
+    height: 300px;
+  }
+
+  .menu__productImg img {
+    width: 50%;
+    height: 100px;
+  }
+  .menu__productPrice,
+  .menu__orderBtn {
+    display: inline-block;
+    margin: 0 5px 0 5px;
+  }
+  .menu__productPrice {
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  .menu__orderBtn {
+    padding: 7px 15px;
+    font-size: 0.9rem;
+  }
+}

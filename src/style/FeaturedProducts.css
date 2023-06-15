@@ -1,0 +1,13 @@
+/* .featuredProduct__slides {
+  width: 100%;
+  height: 300px;
+  margin-top: 20px;
+  padding: 0 60px;
+} */
+
+.ftProd__container h4 {
+  color: var(--background-color2);
+}
+.ftProd__container h6 {
+  color: var(--text-color1);
+}

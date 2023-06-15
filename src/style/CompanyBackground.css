@@ -1,0 +1,65 @@
+/*About Us Section*/
+.aboutUs__img img {
+  width: 75%;
+  border-radius: 20px;
+}
+.seeMore__btn {
+  background: var(--background-color2);
+  color: var(--text-color2);
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 5px;
+  border: none;
+  padding: 7px 25px;
+  display: flex;
+  margin-bottom: 5px;
+}
+.seeMore__btn a:hover,
+.seeMore__btn button:hover {
+  color: var(--background-color2);
+}
+.aboutUs__desc p,
+.aboutUs__desc h2 {
+  color: var(--text-color1);
+  text-align: justify;
+  text-justify: inter-word;
+}
+.aboutUs__desc p {
+  font-size: 1.1rem;
+}
+.aboutUs__desc h2 {
+  text-align: center;
+  position: relative;
+}
+.aboutUs__desc h2:after {
+  content: "";
+  height: 5px;
+  width: 90%;
+  background-color: var(--background-color2);
+  border-radius: 5px;
+  display: block;
+  margin: auto;
+}
+
+@media only screen and (max-width: 576px) {
+  .aboutUs__img img {
+    width: 60%;
+  }
+  .aboutUs__img {
+    text-align: center;
+  }
+  .aboutUs__desc h2 {
+    text-align: center;
+    margin-top: 25px;
+  }
+  .ourPartners__logo img {
+    width: 25%;
+    margin: 15px 50px 0 50px;
+  }
+  .seeMore__btn {
+    width: 50%;
+    margin: auto;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,134 @@
+.login__body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.login__top {
+  width: 100%;
+  flex: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login__top img {
+  max-width: 80%;
+  max-height: auto;
+}
+
+.login__bottom {
+  width: 100%;
+  flex: 65%;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.login__container {
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  border-top: 3px solid var(--background-color2);
+  height: 100%;
+  width: 100%;
+  background-color: var(--background-color1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.login__container h5 {
+  color: var(--background-color2);
+  width: 90%;
+  font-size: 1.5rem;
+  margin: 1rem 0 0.5rem 0;
+}
+
+/* Email and Password Fields */
+.loginForm__group {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  align-self: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.loginForm__group label {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--text-color1);
+  align-self: flex-start;
+}
+.loginForm__input {
+  padding: 0.5rem 2.5rem 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: 2px solid var(--text-color1);
+  box-shadow: 3px 3px var(--background-color2);
+  color: var(--text-color2);
+  font-size: 0.9rem;
+  transition: border-color 0.2s ease-in-out;
+  width: 100%;
+  box-sizing: border-box;
+}
+.loginForm__input:focus {
+  outline: none;
+  border-color: var(--background-color2);
+}
+
+.login__input-container {
+  position: relative;
+}
+
+.login__input-icon {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.visibility-icon {
+  color: var(--text-color2);
+}
+
+/* Login Buttons */
+.signIn__btn {
+  width: 70%;
+  align-self: center;
+  border: none;
+  background-color: var(--background-color2);
+  padding: 7px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.btn__icon {
+  width: 25px;
+  height: 25px;
+  margin: 0 10px;
+}
+.forgotPassTxt {
+  display: flex;
+  justify-content: center;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.forgotPassTxt a {
+  text-decoration: none;
+  color: var(--background-color2);
+}
+.forgotPassTxt a:hover {
+  color: var(--background-color2);
+  cursor: pointer;
+}
+
+.or__txt {
+  font-weight: 600;
+  color: var(--background-color2);
+}

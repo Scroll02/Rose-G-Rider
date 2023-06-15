@@ -1,0 +1,112 @@
+.userProfile__left-container {
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.userProfile__avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.userProfile__avatar img {
+  height: auto;
+  max-width: 20%;
+  border-radius: 10%;
+  object-fit: cover;
+}
+
+.userProfile__details h5 {
+  color: var(--background-color2);
+  font-weight: 500;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.userProfile__group {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.userProfile__item {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-self: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.userProfile__item label {
+  color: var(--text-color1);
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+  align-self: flex-start;
+}
+.userProfile__item span {
+  display: block;
+  color: var(--text-color1);
+  font-size: 1rem;
+  margin-bottom: 5px;
+  background: rgba(178, 178, 178, 0.5);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.userProfile__btns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.userProfile__btns button {
+  margin: 5px 0;
+  width: 80%;
+  height: 30px;
+  background: var(--background-color2);
+  border: none;
+  padding: 4px 20px;
+  border-radius: 5px;
+  color: var(--text-color2);
+  font-weight: 500;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: var(--background-color2) 0.2s ease-in-out;
+}
+
+.userProfile__btns button:hover {
+  background-color: var(--background-color1);
+  color: var(--text-color1);
+}
+
+/* Right Side */
+.userProfile__right-container {
+  background: var(--background-color1);
+  box-shadow: 6px 6px 2px var(--background-color2);
+  border-radius: 20px;
+  padding: 20px;
+  margin: 10px;
+}
+
+.empty__section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.empty__section img {
+  width: 100%;
+  height: auto;
+  max-width: 80%;
+}
+
+.empty__section h6 {
+  font-size: 1.1rem;
+  margin-top: 30px;
+  max-width: 500px;
+  text-align: center;
+  color: var(--background-color2);
+}

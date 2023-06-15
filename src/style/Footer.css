@@ -1,0 +1,119 @@
+.footer {
+  padding-top: 50px;
+  padding-bottom: 10px;
+  background: var(--background-color1);
+  text-decoration: none;
+  border-top: 3px solid var(--background-color2);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.footer__logo img {
+  max-width: 100%;
+  width: 350px;
+}
+.footer__logo p {
+  font-size: 0.9rem;
+  color: var(--text-color2);
+  line-height: 28px;
+}
+.footer__title,
+.footer__title-contact {
+  font-size: 1.1rem;
+  color: var(--background-color2);
+  font-weight: 600;
+}
+.footer__menu-item,
+.delivery__time-item {
+  background: transparent !important;
+}
+.footer__menu-item,
+.delivery__time-item span {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--background-color2);
+}
+
+.footer__menu-item span {
+  display: inline-block;
+  position: relative;
+  color: var(--text-color1);
+}
+.footer__menu-item span:hover {
+  color: var(--background-color2);
+}
+.footer__menu-item span:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--background-color2);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.footer__menu-item span:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.delivery__time-item p {
+  color: var(--text-color1);
+}
+
+.contact__us-item {
+  background: transparent !important;
+}
+.contact__us-item a {
+  text-decoration: none;
+  color: unset;
+}
+.contact__us-item i {
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin-right: 15px;
+  color: var(--background-color2);
+}
+.contact__us-item span {
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--text-color1);
+  vertical-align: 8px;
+}
+.contact__us-item span:hover,
+.contact__us-item span a:hover {
+  color: var(--background-color2);
+}
+
+.conditions__policy {
+  font-size: 0.9rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+.conditions__policy a {
+  color: var(--background-color2);
+}
+.conditions__policy a:hover {
+  color: var(--background-color2);
+}
+
+.copyright__text p {
+  margin-top: 10px;
+  font-size: 0.8rem;
+  text-align: center;
+  color: var(--text-color1);
+}
+.copyright__text i {
+  vertical-align: -2px;
+}
+
+@media only screen and (max-width: 768px) {
+  .footer__title-contact {
+    margin-top: 30px;
+  }
+}
