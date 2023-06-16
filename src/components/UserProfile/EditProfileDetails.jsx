@@ -101,97 +101,7 @@ const EditProfileDetails = ({
     setNewAddress(text);
   };
 
-  // const handleSave = () => {
-  //   const userDataRef = doc(db, "UserData", userData.uid); // getting the UserData document
-
-  //   const newData = {}; // object to hold updated data
-  //   if (newFirstName !== userData?.firstName && newFirstName.trim() !== "") {
-  //     newData.firstName = newFirstName;
-  //   } else {
-  //     newData.firstName = userData?.firstName;
-  //   }
-
-  //   if (newLastName !== userData?.lastName && newLastName.trim() !== "") {
-  //     newData.lastName = newLastName;
-  //   } else {
-  //     newData.lastName = userData?.lastName;
-  //   }
-
-  //   if (newEmail !== userData?.email && newEmail.trim() !== "") {
-  //     newData.email = newEmail;
-  //   } else {
-  //     newData.email = userData?.email;
-  //   }
-
-  //   if (
-  //     newContactNumber !== userData?.contactNumber &&
-  //     newContactNumber.trim() !== ""
-  //   ) {
-  //     newData.contactNumber = newContactNumber;
-  //   } else {
-  //     newData.contactNumber = userData?.contactNumber;
-  //   }
-
-  //   if (newAddress !== userData?.address && newAddress.trim() !== "") {
-  //     newData.address = newAddress;
-  //   } else {
-  //     newData.address = userData?.address;
-  //   }
-
-  //   // Check if a new profile image has been selected
-  //   if (newProfileImage) {
-  //     const storageRef = ref(
-  //       storage,
-  //       `userProfile_images/${userData.uid}/${new Date().getTime()}_${
-  //         newProfileImage.name
-  //       }`
-  //     );
-  //     const uploadTask = uploadBytesResumable(storageRef, newProfileImage);
-
-  //     Promise.all([uploadTask])
-  //       .then(([snapshot]) => {
-  //         return getDownloadURL(snapshot.ref);
-  //       })
-  //       .then((profileImageUrl) => {
-  //         // Delete old profile image if it exists
-  //         if (userData.profileImageUrl) {
-  //           const oldProfileImageRef = ref(storage, userData.profileImageUrl);
-  //           deleteObject(oldProfileImageRef)
-  //             .then(() => {
-  //               console.log("Old profile image deleted successfully");
-  //             })
-  //             .catch((error) => {
-  //               console.log(error);
-  //             });
-  //         }
-
-  //         // Update the document with the new data and profile image URL
-  //         newData.profileImageUrl = profileImageUrl;
-  //         return updateDoc(userDataRef, newData);
-  //       })
-  //       .then(() => {
-  //         onSave();
-  //         showSuccessToast("Profile updated successfully.");
-  //       })
-  //       .catch((error) => {
-  //         console.log(error);
-  //       });
-  //   } else if (Object.keys(newData).length === 0) {
-  //     // No changes made
-  //     showInfoToast("No changes made.");
-  //     return;
-  //   } else {
-  //     // Update the document with the new data
-  //     updateDoc(userDataRef, newData)
-  //       .then(() => {
-  //         onSave();
-  //         showSuccessToast("Profile updated successfully.");
-  //       })
-  //       .catch((error) => {
-  //         console.log(error);
-  //       });
-  //   }
-  // };
+  // Save button function
   const handleSave = async () => {
     const userDataRef = doc(db, "UserData", userData.uid);
     const userDataSnapshot = await getDoc(userDataRef);
@@ -444,7 +354,7 @@ const EditProfileDetails = ({
         </div>
 
         {/* Address */}
-        <div className="editForm__group">
+        {/* <div className="editForm__group">
           <label htmlFor="address__input">Address:&nbsp;</label>
           <input
             type="text"
@@ -454,7 +364,7 @@ const EditProfileDetails = ({
             placeholder="Enter New Address"
             onChange={(e) => handleNewAddress(e.target.value)}
           />
-        </div>
+        </div> */}
       </form>
 
       {/* Save Button */}

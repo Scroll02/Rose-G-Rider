@@ -8,17 +8,14 @@ import EditProfileDetails from "../components/UserProfile/EditProfileDetails";
 import ActivityHistory from "../components/UserProfile/ActivityHistory";
 import ChangePassword from "../components/UserProfile/ChangePassword";
 import TitlePageBanner from "../components/UI/TitlePageBanner";
-
 // Navigation
 import { useNavigate } from "react-router-dom";
 // Firebase
 import { db, auth } from "../firebase";
 import { collection, query, where, getDocs } from "firebase/firestore";
-
 // Redux
 import { useDispatch } from "react-redux";
 import { userLogInState, userLogOutState } from "../store/UserSlice/userSlice";
-
 // Toast
 import { showSuccessToast } from "../components/Toast/Toast";
 
@@ -26,7 +23,7 @@ const UserProfile = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  //------------------ Retrieve User Data ------------------//
+  // Retrieve User Data
   const [userLoggedUid, setUserLoggedUid] = useState(null);
   const [userData, setUserData] = useState(null);
 
@@ -48,7 +45,7 @@ const UserProfile = () => {
     getUserData();
   }, [userLoggedUid]);
 
-  //------------------ Redux (when the page is refresh the data will persist) ------------------//
+  // Redux (when the page is refresh the data will persist)
   useEffect(() => {
     auth.onAuthStateChanged((authUser) => {
       if (authUser) {
@@ -67,9 +64,8 @@ const UserProfile = () => {
     });
   }, []);
 
-  //------------------ Control visibility of section ------------------//
+  // Control visibility of section
   const [showSection, setShowSection] = useState("");
-
   const handleSectionClick = (section) => {
     if (showSection === section) {
       setShowSection("");
@@ -86,6 +82,7 @@ const UserProfile = () => {
   const [newContactNumber, setNewContactNumber] = useState("");
   const [newAddress, setNewAddress] = useState("");
 
+  // This function will close the sections and update the user data
   const handleSave = (newUserData) => {
     // update the user data using new UserData
     setUserData(newUserData);
@@ -139,10 +136,10 @@ const UserProfile = () => {
                     </div>
 
                     {/* Address */}
-                    <div className="userProfile__item">
+                    {/* <div className="userProfile__item">
                       <label>Address:&nbsp;</label>
                       <span>{userData?.address}</span>
-                    </div>
+                    </div> */}
                   </div>
                 </Col>
               </Row>

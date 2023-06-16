@@ -12,9 +12,6 @@ import userReducer from "../store/UserSlice/userSlice";
 const bagMiddleware = (store) => (next) => (action) => {
   const result = next(action);
   if (action.type.startsWith("bag/")) {
-    // const bagState = store.getState().bag;
-    // localStorage.setItem("bagData", JSON.stringify(bagState));
-
     const bagState = store.getState().bag;
     const userId = store.getState().user.user?.id || "default"; // assuming you have a user ID field
     localStorage.setItem(`bagData_${userId}`, JSON.stringify(bagState));

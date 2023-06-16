@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { usePersistedAuthState } from "../usePersistedAuthState";
 
 const initialState = {
   user: null,
@@ -28,5 +29,7 @@ export const { userLogInState, userLogOutState, setSignInClicked } =
   userSlice.actions;
 
 export const selectUser = (state) => state.user.user;
+
+export const useAuthState = () => usePersistedAuthState();
 
 export default userSlice.reducer;

@@ -92,10 +92,11 @@
   height: 45px;
   font-size: 0.9rem;
   font-weight: 600;
-  color: #000000;
+  margin: 10px 0;
+  color: var(--text-color2);
   text-decoration: none;
   transition: background-color 0.2s ease-in-out;
-  border: 1px solid var(--background-color1);
+  /* border: 1px solid var(--background-color1); */
 }
 .dropdown__menu__item img {
   width: 18px;

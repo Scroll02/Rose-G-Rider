@@ -1,6 +1,8 @@
 import React from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 
+import { useAuthState } from "../store/UserSlice/userSlice";
+
 import Orders from "../pages/Orders";
 import OrderTracker from "../pages/OrderTracker";
 import Login from "../pages/Login";
@@ -11,9 +13,14 @@ import ActivityHistoryDetails from "../components/UserProfile/ActivityHistoryDet
 import GoogleMaps from "../pages/GoogleMaps";
 
 const Routers = () => {
+  const user = useAuthState();
   return (
     <Routes>
-      <Route path="/" element={<Navigate to="/login" />} />
+      {/* <Route path="/" element={<Navigate to="/login" />} /> */}
+      <Route
+        path="/"
+        element={user ? <Navigate to="/orders" /> : <Navigate to="/login" />}
+      />
       <Route path="/orders" element={<Orders />} />
       <Route path="/orders/:orderId" element={<OrderTracker />} />
       <Route path="/login" element={<Login />} />

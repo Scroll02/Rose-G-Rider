@@ -3,7 +3,7 @@ import "../style/OrderTracker.css";
 import { Container, Row, Col } from "reactstrap";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import moment from "moment";
-import { Phone, LocationOn } from "@mui/icons-material";
+import { Phone, LocationOn, Message } from "@mui/icons-material";
 import TitlePageBanner from "../components/UI/TitlePageBanner";
 // Modal
 import Modal from "../components/Modal/Modal";
@@ -64,14 +64,27 @@ const OrderTracker = () => {
     window.location.href = `tel:${orderData?.orderContactNumber}`;
   };
 
+  // Message button function
+  const handleMessageButtonClick = () => {
+    const contactNumber = orderData?.orderContactNumber;
+    const messageUrl = `sms:${contactNumber}`;
+    window.location.href = messageUrl;
+  };
+
   // Google map button function
-  // const handleGoogleMapsButtonClick = () => {
-  //   const deliveryAddress = orderData?.orderAddress;
-  //   if (deliveryAddress) {
-  //     const encodedAddress = encodeURIComponent(deliveryAddress);
-  //     navigate(`/googleMaps?address=${deliveryAddress}`);
-  //   }
-  // };
+  const handleGoogleMapsButtonClick = () => {
+    const deliveryAddress = orderData?.orderAddress;
+
+    if (deliveryAddress) {
+      const mapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(
+        deliveryAddress
+      )}`;
+
+      window.location.href = mapsUrl;
+    } else {
+      console.log("Delivery address not available.");
+    }
+  };
 
   // Delivered button function
   const handleDeliveredButtonClick = async () => {
@@ -261,26 +274,33 @@ const OrderTracker = () => {
                 {orderData?.orderStatus !== "Delivered" &&
                   orderData?.orderStatus !== "Cancelled" && (
                     <div className="order__details-actions">
-                      <button
-                        className="order__details-button"
-                        onClick={handleCallButtonClick}
-                      >
-                        <Phone className="order__details-button-icon" />
-                        Call
-                      </button>
-
-                      <Link
-                        to={`/googleMaps/${orderData?.delieveryAddress}`}
-                        className=" no-underline"
-                      >
+                      <div className="order__details-row">
                         <button
                           className="order__details-button"
-                          // onClick={handleGoogleMapsButtonClick}
+                          onClick={handleCallButtonClick}
+                        >
+                          <Phone className="order__details-button-icon" />
+                          Call
+                        </button>
+
+                        <button
+                          className="order__details-button"
+                          onClick={handleMessageButtonClick}
+                        >
+                          <Message className="order__details-button-icon" />
+                          Message
+                        </button>
+                      </div>
+
+                      <div className="order__details-row">
+                        <button
+                          className="order__details-button"
+                          onClick={handleGoogleMapsButtonClick}
                         >
                           <LocationOn className="order__details-button-icon" />
-                          Google Maps
+                          Google Map
                         </button>
-                      </Link>
+                      </div>
                     </div>
                   )}
               </div>

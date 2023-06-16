@@ -67,13 +67,19 @@
   font-size: 0.9rem;
   font-weight: 500;
 }
+
 .order__details-actions {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
   align-items: center;
   margin: 10px 0;
 }
-
+.order__details-row {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-bottom: 10px;
+}
 .order__details-button {
   color: var(--text-color1);
   font-weight: 600;
@@ -93,6 +99,7 @@
   margin-right: 0.5rem;
   color: var(--background-color2);
 }
+
 .order__msg {
   padding: 5px 0;
   width: 80%;

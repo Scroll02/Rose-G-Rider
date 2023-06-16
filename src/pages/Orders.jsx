@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "../style/Orders.css";
 import { Container, Row, Col } from "reactstrap";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, Navigate } from "react-router-dom";
+import { useAuthState } from "../store/UserSlice/userSlice";
 import moment from "moment/moment";
 import TitlePageBanner from "../components/UI/TitlePageBanner";
 import OrderFood from "../assets/images/order-food.png";
@@ -26,6 +27,15 @@ const Orders = () => {
   const [filterMonth, setFilterMonth] = useState("All Months");
   const [filterYear, setFilterYear] = useState("All Years");
   const [availableYears, setAvailableYears] = useState([]);
+
+  const user = useAuthState();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (user) {
+      navigate("/orders");
+    }
+  }, [user]);
 
   const clearOrderData = () => {
     setOrderData([]);
@@ -127,7 +137,6 @@ const Orders = () => {
   }, [filterMonth, filterYear]);
 
   // Accept Order button function
-  const navigate = useNavigate();
   const acceptOrder = async (orderId) => {
     try {
       // Get the user's first name and last name from the UserData
